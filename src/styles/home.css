@@ -1,0 +1,168 @@
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 570px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: -4rem;
+}
+
+.parallax-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.parallax-image {
+  height: 50vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image-1 {
+  background-image: url("/public/assets/item1.jpg");
+  margin-top: -6rem;
+  z-index: -999;
+}
+
+.image-2 {
+  background-image: url("/public/assets/item2.jpg");
+}
+
+.image-3 {
+  background-image: url("/public/assets/item3.jpg");
+}
+
+.cta-shadow-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.cta-button {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  color: var(--dark);
+  border: 3px solid var(--mint);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transform: translateY(0);
+}
+
+/* Shadow behind button */
+.cta-shadow-wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mint);
+  border-radius: 2rem;
+}
+
+/* Hover – press the button */
+.cta-shadow-wrapper:hover .cta-button {
+  transform: translateY(8px);
+}
+
+/* === Sections === */
+.section-opening {
+  background-color: var(--peach);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  font-family: var(--font-text);
+  color: var(--dark);
+}
+
+.info-title {
+  font-family: var(--font-heading);
+  font-size: 36px;
+  color: var(--accent-brown);
+  margin-bottom: 1.5rem;
+}
+
+.info-subtitle {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.info-hours p {
+  margin: 0.2rem 0;
+  font-size: 16px;
+}
+
+.info-hours p em {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.info-hours p strong {
+  font-size: 20px;
+  color: var(--dark);
+}
+
+.dots {
+  font-size: 4rem;
+  color: var(--accent-brown);
+  margin: 1rem 0;
+}
+
+.info-address,
+.info-phone,
+.info-email {
+  font-weight: 600;
+}
+
+.section-full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.section-full-width .section-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section-reviews .review-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem; 
+  justify-content: center;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-reviews .card {
+  width: 24ch; 
+  height: 24ch;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 8px 4px 0 var(--pink);
+  border: 3px solid var(--pink);
+}
+
+.section-about {
+  background-color: var(--peach);
+  padding: 2rem;
+  text-align: center;
+}
