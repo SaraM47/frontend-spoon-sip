@@ -1,10 +1,9 @@
-.banner img {
+.banner-bg {
+  background-image: url("/assets/banner.png");
+  background-size: cover;
+  background-position: center;
   width: 100%;
-  height: auto;
-  max-height: 570px;
-  object-fit: cover;
-  display: block;
-  margin-bottom: -4rem;
+  height: 70vh;
 }
 
 .parallax-container {
@@ -13,7 +12,7 @@
 }
 
 .parallax-image {
-  height: 50vh;
+  height: 100vh; /* 50vh */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,17 +20,17 @@
 }
 
 .image-1 {
-  background-image: url("/public/assets/item1.jpg");
-  margin-top: -6rem;
+  background-image: url("/assets/item1.jpg");
+  margin-top: -26rem;
   z-index: -999;
 }
 
 .image-2 {
-  background-image: url("/public/assets/item2.jpg");
+  background-image: url("/assets/item2.jpg");
 }
 
 .image-3 {
-  background-image: url("/public/assets/item3.jpg");
+  background-image: url("/assets/item3.jpg");
 }
 
 .cta-shadow-wrapper {
@@ -85,7 +84,8 @@
   color: var(--dark);
 }
 
-.info-title {
+.info-title,
+.section-about h2 {
   font-family: var(--font-heading);
   font-size: 36px;
   color: var(--accent-brown);
@@ -144,25 +144,45 @@
 .section-reviews .review-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem; 
+  gap: 2rem;
   justify-content: center;
-  margin-top: 2rem;
+  margin: 2rem auto 2rem auto;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section-reviews .card {
-  width: 24ch; 
-  height: 24ch;
+  width: 26ch;
+  height: 26ch;
   background-color: white;
   border-radius: 1rem;
   box-shadow: 8px 4px 0 var(--pink);
   border: 3px solid var(--pink);
+  padding: 1rem;
+}
+
+.section-reviews .card p {
+  font-size: 1rem;
 }
 
 .section-about {
   background-color: var(--peach);
   padding: 2rem;
   text-align: center;
+}
+
+.review-cards .stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+.review-cards .review-date {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .banner-bg {
+    height: 36vh;
+    margin-top: -1rem;
+  }
 }
