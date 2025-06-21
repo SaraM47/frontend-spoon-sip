@@ -1,18 +1,14 @@
 /**
  * Entry script for the Spoon & Sip homepage.
  * - Initializes scroll-triggered fade-in animations.
- * - Dynamically loads customer reviews.
  * - Enables mobile navigation menu toggling.
  */
 
 import { initScrollFadeIn } from './scrollFade';
-import { loadHomepageReviews } from './reviews';
 
 window.addEventListener('DOMContentLoaded', () => {
   initScrollFadeIn();
 
-  // Load general homepage reviews
-  loadHomepageReviews();
 });
 
 
