@@ -33,47 +33,6 @@
   background-image: url("/assets/item3.jpg");
 }
 
-.cta-shadow-wrapper {
-  position: relative;
-  display: inline-block;
-  margin: 1rem;
-}
-
-.cta-button {
-  position: relative;
-  z-index: 2;
-  background-color: white;
-  color: var(--dark);
-  border: 3px solid var(--mint);
-  font-family: var(--font-title);
-  font-size: 1.2rem;
-  font-weight: 700;
-  padding: 1rem 2.5rem;
-  border-radius: 2rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  transform: translateY(0);
-}
-
-/* Shadow behind button */
-.cta-shadow-wrapper::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 8px;
-  left: 8px;
-  width: 100%;
-  height: 100%;
-  background-color: var(--mint);
-  border-radius: 2rem;
-}
-
-/* Hover – press the button */
-.cta-shadow-wrapper:hover .cta-button {
-  transform: translateY(8px);
-}
 
 /* === Sections === */
 .section-opening {
