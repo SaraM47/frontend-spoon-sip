@@ -203,13 +203,55 @@ p, li {
   color: var(--dark);
 }
 
-/* === CTA-button === */
+/* CTA-button  */
 .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin: 1rem 0 2rem 0;
   padding: 0% 0% 2%;
+}
+
+.cta-shadow-wrapper {
+  position: relative;
+  display: inline-block;
+  margin: 1rem;
+}
+
+.cta-button {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  color: var(--dark);
+  border: 3px solid var(--mint);
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transform: translateY(0);
+}
+
+/* Shadow behind button */
+.cta-shadow-wrapper::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--mint);
+  border-radius: 2rem;
+}
+
+/* Hover – press the button */
+.cta-shadow-wrapper:hover .cta-button {
+  transform: translateY(8px);
 }
 
 .fade-in {
@@ -222,7 +264,6 @@ p, li {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 /* Hamburgmenu */
 .mobile-header {
@@ -262,6 +303,12 @@ p, li {
   font-weight: bold;
   margin: 0.5rem 0;
   font-family: var(--font-title);
+}
+
+.hidden-element{
+  visibility: hidden;
+  position: absolute;
+  left: -9999px;
 }
 
 /* === Responsive design === */
