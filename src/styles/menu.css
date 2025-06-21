@@ -1,0 +1,190 @@
+.menu-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--accent-brown);
+  margin: 2rem 0 1rem;
+}
+
+.menu-subtitle {
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Categori-filterbutton */
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.menu-filter-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-family: var(--font-title);
+  border: 2px solid var(--mint);
+  background-color: white;
+  color: var(--dark);
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-filter-btn:hover,
+.menu-filter-btn.active {
+  background-color: var(--mint);
+  color: white;
+}
+
+/* Menusection background */
+.menu-container {
+  background-image: url("/assets/menutemplate.png");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Menuobject */
+.menu-item {
+  /* background-color: rgba(255, 255, 255, 0.95); */
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+.menu-item h3 {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  color: var(--accent-brown);
+  margin-bottom: 0.3rem;
+}
+
+.menu-item p {
+  font-size: 1rem;
+  color: var(--dark);
+  margin: 0.2rem 0;
+}
+
+.menu-item .price {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu-item .camera-icon {
+  position: absolute;
+  top: 1.2rem;
+  right: 3.5rem;
+  font-size: 1.2rem;
+  color: var(--accent-brown);
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+/* Modal (for image display) */
+.menu-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-modal-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.menu-modal-content img {
+  max-width: 90vw;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.menu-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Wrapper för pris + ikon */
+.price-and-icon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.menu-item .price,
+.menu-item .camera-icon {
+  position: static;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 540px) {
+    .menu-item {
+      padding: 1rem 1rem;
+    }
+  
+    .menu-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+    }
+  
+    .menu-item p {
+      font-size: 0.95rem;
+    }
+  
+    .price-and-icon {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0.5rem;
+      gap: 1rem;
+      position: static;
+    }
+  
+    .menu-item .price {
+      position: static;
+      font-size: 1.1rem;
+    }
+  
+    .menu-item .camera-icon {
+      position: static;
+      font-size: 1.2rem;
+    }
+  }
+  
