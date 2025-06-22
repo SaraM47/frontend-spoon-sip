@@ -1,13 +1,7 @@
+import type { Review } from "../types/Review";
+
 // Seting the base URL for API calls, using Vite's environment variable or defaulting to localhost
 const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
-
-// Define the Review type used throughout the module
-type Review = {
-  name: string;
-  rating: number;
-  comment: string;
-  createdAt: string;
-};
 
 // Fetch and display recent reviews on the homepage
 export async function loadHomepageReviews() {
