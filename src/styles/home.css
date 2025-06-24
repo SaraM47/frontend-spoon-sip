@@ -175,6 +175,10 @@
   color: var(--dark);
 }
 
+.rating-heading {
+  margin-top: 1rem;
+}
+
 @media (max-width: 768px) {
   .banner-bg {
     height: 36vh;
