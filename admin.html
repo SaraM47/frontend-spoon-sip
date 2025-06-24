@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    <title>Admin Panel | Spoon & Sip</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="/src/styles/admin.css">
+    <script type="module" src="/src/script/main.ts"></script>
+    <script type="module" src="/src/script/admin.ts"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobil-header (only visible on small screens) -->
+    <div class="mobile-header">
+        <a href="/" class="logo">
+            <img src="/assets/logo.png" alt="Spoon & Sip Logo">
+        </a>
+        <button class="mobile-menu-button" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <i class="bi bi-list"></i>
+          </button>
+    </div>
+
+    <!-- Mobile navigation -->
+    <nav id="mobileNav" class="mobile-nav">
+        <a href="/login.html">LOG IN</a>
+        <a href="/register.html">REGISTER</a>
+        <a href="/">WEBSITE</a>
+    </nav>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="/" class="logo">
+                <img src="/assets/logo.png" alt="Spoon & Sip Logo">
+            </a>
+
+            <nav class="nav-links">
+                <a href="/login.html">LOG IN</a>
+                <a href="/register.html">REGISTER</a>
+                <a href="/">WEBSITE</a>
+            </nav>
+
+            <div class="contact-info">
+                <p><strong>Address:</strong><br>17 Rue Montorgueil, 75001 Paris, France</p>
+                <p><strong>Phone:</strong> +33 1 84 88 47 22</p>
+                <p><strong>Hours:</strong> Every Day, 8:00 AM – 9:00 PM</p>
+                <p><strong>Email:</strong> info@spoonandsip.com</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main admin content -->
+        <main class="admin-page">
+            <header class="admin-header">
+                <h1 class="admin-title">ADMIN PANEL</h1>
+                <div class="admin-info">
+                    <span id="adminEmail">admin@spoon.com</span>
+                    <div class="cta-shadow-wrapper">
+                        <button id="logoutBtn" class="cta-button small">Log out</button>
+                    </div>
+                </div>
+            </header>
+
+            <h2 class="section-title">Quick navigation</h2>
+            <p class="section-description">
+                Use the buttons below to jump directly to the section you want to manage.
+            </p>
+            <nav class="admin-nav">
+                <div class="nav-buttons">
+                    <button onclick="document.getElementById('menuSection').scrollIntoView({ behavior: 'smooth' })">Menu</button>
+                    <button onclick="document.getElementById('orderSection').scrollIntoView({ behavior: 'smooth' })">Orders</button>
+                    <button onclick="document.getElementById('messageSection').scrollIntoView({ behavior: 'smooth' })">Messages</button>
+                    <button onclick="document.getElementById('userSection').scrollIntoView({ behavior: 'smooth' })">Users</button>
+                    <button onclick="document.getElementById('reviewSection').scrollIntoView({ behavior: 'smooth' })">Reviews</button>
+                </div>
+            </nav>
+
+
+            <!-- Menu management -->
+            <section id="menuSection" class="menu-management">
+                <div class="section-header">
+                    <h2 class="section-title">Menu Management</h2>
+                    <div class="cta-shadow-wrapper">
+                        <button id="addMenuItemBtn" class="cta-button">Add new</button>
+                    </div>
+                </div>
+
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Ingredients</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="menuItemList">
+                        <!-- Dynamic menu content here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="admin-filter-row">
+                <label for="orderStatusFilter">Filter by status:</label>
+                <select id="orderStatusFilter">
+                    <option value="all">All</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <!-- Order management  -->
+            <section id="orderSection" class="order-management">
+                <h2 class="section-title">Takeaway Orders</h2>
+                <div class="order-table-wrapper">
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Phone number</th>
+                                <th>Order</th>
+                                <th>Pickup Time</th>
+                                <th>People</th>
+                                <th>Note</th>
+                                <th>Arrangements</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderList"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Contact message management -->
+            <section id="messageSection" class="message-management">
+                <h2 class="section-title">Contact messages</h2>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="messageList">
+                        <!-- Messages will be populated here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- User Management -->
+            <section id="userSection" class="user-management">
+                <h2 class="section-title">Registered users</h2>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Created</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userList">
+                        <!-- User content will be filled dynamically -->
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Review Management -->
+            <section id="reviewSection" class="review-management">
+                <h2 class="section-title">Product reviews</h2>
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>User</th>
+                            <th>Rating</th>
+                            <th>Comment</th>
+                            <th>Time</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reviewList">
+                        <!-- Dynamic content through JS -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="adminModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Edit Menu Item</h3>
+            <form id="modalForm">
+                <!-- Form fields injected via JS -->
+            </form>
+            <div class="modal-actions">
+                <div class="cta-shadow-wrapper">
+                    <button type="submit" form="modalForm" class="cta-button">Save changes</button>
+                </div>
+                <div class="cta-shadow-wrapper">
+                    <button type="button" class="cta-button cancel-btn" id="cancelModalBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete confirmation modal -->
+    <div id="deleteModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Confirm deletion</h3>
+            <p>Are you sure you want to delete this item?</p>
+            <div class="modal-actions">
+                <div class="cta-shadow-wrapper">
+                    <button id="confirmDeleteBtn" class="cta-button danger">Delete</button>
+                </div>
+                <div class="cta-shadow-wrapper">
+                    <button id="cancelDeleteBtn" class="cta-button cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete confirmation modal for orders -->
+    <div id="orderDeleteModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Confirm deletion</h3>
+            <p>Are you sure you want to delete this order?</p>
+            <div class="modal-actions">
+                <div class="cta-shadow-wrapper">
+                    <button id="confirmOrderDeleteBtn" class="cta-button danger">Delete</button>
+                </div>
+                <div class="cta-shadow-wrapper">
+                    <button id="cancelOrderDeleteBtn" class="cta-button cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete confirmation modal for contact messages -->
+    <div id="contactDeleteModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Confirm deletion</h3>
+            <p>Are you sure you want to delete this message?</p>
+            <div class="modal-actions">
+                <div class="cta-shadow-wrapper">
+                    <button id="confirmContactDeleteBtn" class="cta-button danger">Delete</button>
+                </div>
+                <div class="cta-shadow-wrapper">
+                    <button id="cancelContactDeleteBtn" class="cta-button cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete confirmation modal for users -->
+    <div id="userDeleteModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Confirm deletion</h3>
+            <p>Are you sure you want to delete this user?</p>
+            <div class="modal-actions">
+                <div class="cta-shadow-wrapper">
+                    <button id="confirmUserDeleteBtn" class="cta-button danger">Delete</button>
+                </div>
+                <div class="cta-shadow-wrapper">
+                    <button id="cancelUserDeleteBtn" class="cta-button cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete confirmation modal for reviews -->
+    <div id="reviewDeleteModal" class="modal hidden">
+        <div class="modal-content">
+            <h3 class="modal-title">Confirm deletion</h3>
+            <p>Are you sure you want to delete this review?</p>
+            <div class="modal-actions">
+                <div class="cta-shadow-wrapper">
+                    <button id="confirmReviewDeleteBtn" class="cta-button danger">Delete</button>
+                </div>
+                <div class="cta-shadow-wrapper">
+                    <button id="cancelReviewDeleteBtn" class="cta-button cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
