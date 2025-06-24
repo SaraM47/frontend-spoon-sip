@@ -24,6 +24,7 @@
 
 html, body {
   overflow-x: hidden; /* Removes horizontal scrollbar */
+  
 }
 
 body {
@@ -59,7 +60,7 @@ body {
 }
 
 .logo img {
-  width: 100%;
+  width: 70%;
   height: auto;
   object-fit: contain;
 }
@@ -165,7 +166,6 @@ main {
   flex: 1;
   scroll-behavior: smooth;
   margin-left: 35ch;
-  
 }
 
 /* === Typography === */
@@ -310,6 +310,15 @@ p, li {
   position: absolute;
   left: -9999px;
 }
+
+.mobile-menu-button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--dark);
+}
+
 
 /* === Responsive design === */
 @media (max-width: 1210px) and (min-width: 769px) {
