@@ -123,6 +123,8 @@ form?.addEventListener("submit", async (e) => {
     customerName: formData.get("name"),
     phone: formData.get("phone"),
     time: new Date().toISOString().split("T")[0] + "T" + formData.get("time"),
+    people: formData.get("people"),
+    note: formData.get("notes"),
     menuItemIds,
   };
 
