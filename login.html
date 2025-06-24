@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Spoon & Sip</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <link rel="stylesheet" href="/src/styles/auth.css">
+    <script type="module" src="/src/script/main.ts"></script>
+    <script type="module" src="/src/script/login.ts"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobil-header (only visible on small screens) -->
+    <div class="mobile-header">
+        <a href="/index.html" class="logo">
+            <img src="/assets/logo.png" alt="Spoon & Sip Logo">
+        </a>
+        <button class="mobile-menu-button" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+            <i class="bi bi-list"></i>
+          </button>
+    </div>
+
+    <!-- Mobile navigation -->
+    <nav id="mobileNav" class="mobile-nav">
+        <a href="/index.html">Home</a>
+        <a href="/menu.html">Menu</a>
+        <a href="/takeaway.html">Take away</a>
+        <a href="/ourstory.html">Our story</a>
+        <a href="/login.html">Profile</a>
+    </nav>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="/index.html" class="logo">
+                <img src="/assets/logo.png" alt="Spoon & Sip Logo">
+            </a>
+
+            <nav class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/menu.html">Menu</a>
+                <a href="/takeaway.html">Take away</a>
+                <a href="/ourstory.html">Our story</a>
+                <hr class="nav-separator">
+                <a href="/login.html">Profile</a>
+            </nav>
+
+            <div class="contact-info">
+                <p><strong>Address:</strong><br>17 Rue Montorgueil, 75001 Paris, France</p>
+                <p><strong>Phone:</strong> +33 1 84 88 47 22</p>
+                <p><strong>Hours:</strong> Every Day, 8:00 AM – 9:00 PM (Local Time)</p>
+                <p><strong>Email:</strong> info@spoonandsip.com</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </aside>
+
+        <div class="auth-wrapper">
+            <main class="auth-page">
+                <h1>Login</h1>
+                <form id="loginForm">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your email">
+
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Your password">
+                    <div class="cta-buttons">
+                        <div class="cta-shadow-wrapper">
+                            <button type="submit" class="cta-button">LOG IN</button>
+                        </div>
+                    </div>
+                </form>
+
+                <p id="loginMessage"></p>
+
+                <p class="auth-link">
+                    Don't have an account?
+                    <a href="/register.html"><strong>Create one</strong></a>
+                </p>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
