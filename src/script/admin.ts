@@ -16,7 +16,6 @@ const headers = {
 };
 
 // DOM elements
-// === DOM Elements ===
 // Get references to all relevant DOM elements for admin panel
 const menuList = document.getElementById('menuItemList') as HTMLTableSectionElement;
 const orderList = document.getElementById('orderList') as HTMLTableSectionElement;
@@ -30,7 +29,7 @@ const reviewList = document.getElementById('reviewList') as HTMLTableSectionElem
 const userList = document.getElementById('userList') as HTMLTableSectionElement;
 const orderStatusFilter = document.getElementById('orderStatusFilter') as HTMLSelectElement;
 
-// === Delete Modals ===
+// This is for Delete Modals 
 // Store references and state for delete confirmation modals
 let deleteId = '';
 let orderDeleteId = '';
