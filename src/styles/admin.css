@@ -1,0 +1,375 @@
+.admin-page {
+  padding: 2rem;
+  flex: 1;
+  background-color: var(--light);
+  margin-top: 2rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid var(--mint);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--accent-brown);
+}
+
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-text);
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.order-management{
+  margin-top: 4rem;
+}
+
+.admin-nav {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.admin-nav .nav-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.admin-nav button {
+  background-color: var(--mint);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 2rem;
+}
+
+.admin-nav button:hover {
+  background-color: var(--pink);
+}
+
+/* === Section Titles === */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Menu list */
+.admin-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--mint);
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  font-family: var(--font-text);
+}
+
+
+.cta-button.danger {
+  border-color: #ff3131;
+  color: #ff3131;
+}
+
+.cta-button.danger:hover {
+  background-color: #ff3131;
+  color: white;
+}
+
+/* Order table styling */
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.order-table th,
+.order-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  font-family: var(--font-text);
+  font-size: 1.2rem;
+}
+
+.order-table th {
+  color: var(--dark);
+  font-family: var(--font-title);
+}
+
+.order-table td:first-child {
+  font-size: 1.1rem;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.order-table td:nth-child(4) {
+  max-width: 200px;
+  overflow-wrap: break-word;
+}
+
+.order-table-wrapper {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal-content {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #fff8e1;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--cream);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1rem;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#modalForm label {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-text);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+#modalForm input,
+#modalForm textarea {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+#deleteModal .modal-title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+#deleteModal p, #orderDeleteModal p, #contactDeleteModal p, #userDeleteModal p, #reviewDeleteModal p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-preview-image {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.admin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--mint);
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  font-family: var(--font-text);
+}
+
+.admin-actions-row {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.admin-preview-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 6px;
+}
+
+
+
+
+
+.admin-filter-row {
+font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-text);
+  margin-bottom: -2rem;
+  margin-top: 4rem;
+}
+
+.admin-filter-row select{
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: white;
+  font-family: var(--font-text);
+}
+
+.status-tag.completed {
+  padding: 0.3rem 0.6rem;
+  background-color: #c8f7c5;
+  color: #2d662f;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  font-family: var(--font-text);
+}
+
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+  .admin-nav button {
+    font-size: 1rem;
+  }
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .admin-title {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .admin-info {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .order-table,
+  .order-table thead {
+    display: none;
+  }
+
+  .order-table,
+  .order-table tbody,
+  .order-table tr,
+  .order-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .order-table tr {
+    margin-bottom: 1.5rem;
+
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .order-table td {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    position: relative;
+  }
+
+  .order-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.3rem;
+    color: var(--dark);
+    font-family: var(--font-title);
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1.2rem;
+  }
+
+  #modalForm label {
+    font-size: 1rem;
+  }
+
+  #modalForm input,
+  #modalForm textarea {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+}
