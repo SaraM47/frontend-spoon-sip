@@ -111,10 +111,10 @@ fetch('/api/menu', {
 ## File structure and tech stack
 The frontend app is organized into folders by purpose:
 
-/src/pages/ - All HTML files (e.g. index.html, menu.html, takeaway.html)
-/src/script/ - All TypeScript logic, separated by page
-/src/styles/ - CSS/SCSS files for layout and visual identity
-/src/types/ - TypeScript interfaces for structured data
+- /src/pages/ : All HTML files (e.g. index.html, menu.html, takeaway.html)
+- /src/script/ : All TypeScript logic, separated by page
+- /src/styles/ : CSS/SCSS files for layout and visual identity
+- /src/types/ : TypeScript interfaces for structured data
 
 ---
 
