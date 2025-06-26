@@ -53,9 +53,9 @@ form.addEventListener('submit', async (e) => {
 
     setTimeout(() => {
       if (data.role === 'admin') {
-        window.location.href = '/admin.html';
+        window.location.href = '/src/pages/admin.html';
       } else {
-        window.location.href = '/login.html';
+        window.location.href = '/src/pages/login.html';
       }
     }, 1500);
   } catch (err) {
