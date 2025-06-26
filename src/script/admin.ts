@@ -8,7 +8,7 @@ const role = localStorage.getItem('role');
 const email = localStorage.getItem('email');
 
 if (!token || role !== 'admin') {
-  window.location.href = '/login.html';
+  window.location.href = '/src/pages/login.html';
 }
 
 const headers = {
@@ -507,7 +507,7 @@ async function fetchReviews() {
 // Clear localStorage and redirect to login page
 logoutBtn?.addEventListener('click', () => {
   localStorage.clear();
-  window.location.href = '/login.html';
+  window.location.href = '/src/pages/login.html';
 });
 
 // Load all data and set admin email in header
