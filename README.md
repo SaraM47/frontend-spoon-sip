@@ -111,22 +111,17 @@ fetch('/api/menu', {
 ## File structure and tech stack
 The frontend app is organized into folders by purpose:
 
-/src/
-├── pages/        All HTML files (e.g. index.html, menu.html, takeaway.html)
-├── script/       All TypeScript logic, separated by page
-├── styles/       CSS/SCSS files for layout and visual identity
-├── types/        TypeScript interfaces for structured data
+/src/pages/ - All HTML files (e.g. index.html, menu.html, takeaway.html)
+/src/script/ - All TypeScript logic, separated by page
+/src/styles/ - CSS/SCSS files for layout and visual identity
+/src/types/ - TypeScript interfaces for structured data
 
 ---
 
 ## Special Features
-Review system: Write, view, and delete reviews (includes name, rating, comment)
-
-Contact form: Connected to the backend and stored in the database
-
-Image modal: Product images open in a larger modal view
-
-Virtual receipt: Order receipt is logged in the console after a successful order
-
-Admin panel: CRUD operations, image upload, order filtering, review moderation
+- Review system: Write, view, and delete reviews (includes name, rating, comment)
+- Contact form: Connected to the backend and stored in the database
+- Image modal: Product images open in a larger modal view
+- Virtual receipt: Order receipt is logged in the console after a successful order
+- Admin panel: CRUD operations, image upload, order filtering, review moderation
 
