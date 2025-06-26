@@ -13,8 +13,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 // Toggle function for opening and closing the mobile navigation menu
-function toggleMobileNav() {
-  const nav = document.getElementById('mobileNav');
-  if (nav) nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-}
-(window as any).toggleMobileNav = toggleMobileNav;
+window.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('menuToggle') as HTMLButtonElement;
+  const nav = document.getElementById('mobileNav') as HTMLElement;
+
+  toggleBtn?.addEventListener('click', () => {
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  });
+});
