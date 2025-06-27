@@ -322,27 +322,6 @@ li {
 }
 
 /* Responsive design */
-/* @media (max-width: 1210px) and (min-width: 769px) {
-  .sidebar {
-    display: none;
-  }
-
-  .mobile-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: var(--cream);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  main {
-    margin: auto 0;
-  }
-} */
-
 @media (min-width: 1211px) {
   .mobile-header,
   .mobile-nav {
