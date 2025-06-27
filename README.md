@@ -58,7 +58,7 @@ Below that section, a contact form makes it easy to reach the team..
 The form includes fields for name, email, and message, and is submitted to backend through /api/contact.
 A confirmation message appears immediately after sending. All data is transmitted securely.
 
-### 3. Log in (profile.html)
+### Log in (profile.html)
 To log in as an administrator, use login.html.
 They enter their email address and password, which is password protected form, and when these are correct, the server returns a JWT token that is saved locally in the browser in localStorage.
 This token is then used to authenticate the user on all future protected API endpoints.
@@ -94,7 +94,6 @@ Once logged in as an admin, you can:
 To log out, click the "Log out" button in the admin panel.
 This removes the JWT token from localStorage and redirects the user to login.html.
 This ensures secure access and prevents unauthorized users from reusing the session on the same device.
-
 
 ---
 
