@@ -179,9 +179,92 @@
   margin-top: 1rem;
 }
 
+/* Decorative illustration styling */
+.floating-deco-wrapper {
+  position: relative;
+  height: 200px; 
+  z-index: 5;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.floating-illustration {
+  position: absolute;
+  animation: floatUpDown 2s ease-in-out infinite;
+  will-change: transform;
+  z-index: 0;
+}
+
+.floating-illustration img {
+  width: 80px;
+  max-width: 14vw;
+  opacity: 0.4;
+  transform: rotate(25deg);
+  filter: sepia(1) hue-rotate(310deg) saturate(5);
+}
+
+.smoothie-1 { animation: floatUpDown 2s ease-in-out infinite; }
+.smoothie-2 { animation: floatUpDown 2.2s ease-in-out infinite; }
+.juice      { animation: floatUpDown 2.4s ease-in-out infinite; }
+.bowl       { animation: floatUpDown 2.6s ease-in-out infinite; }
+
+/* Individual positioning for each illustration */
+.smoothie-1 {
+  top: 40vh;
+  left: 4vw;
+}
+
+.smoothie-2 {
+  top: 60vh;
+  right: 6vw;
+}
+
+.juice {
+  bottom: 18vh;
+  left: 8vw;
+}
+
+.bowl {
+  top: -20vh;
+  right: 10vw;
+}
+
+.smoothie-1 img {
+  transform: rotate(-20deg);
+}
+
+.smoothie-2 img {
+  transform: rotate(15deg);
+}
+
+.juice img {
+  transform: rotate(25deg);
+}
+
+.bowl img {
+  transform: rotate(-10deg);
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
 @media (max-width: 768px) {
   .banner-bg {
     height: 36vh;
     margin-top: -1rem;
   }
+
+  .floating-illustration img {
+    width: 60px;
+  }
+
+  .smoothie-1 { top: 40vh; left: 2vw; }
+  .smoothie-2 { top: 50vh; right: 3vw; }
+  .juice      { bottom: 12vh; left: 4vw; }
+  .bowl       { bottom: 6vh; right: 5vw; }
 }
