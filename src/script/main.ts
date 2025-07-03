@@ -8,12 +8,8 @@ import { initScrollFadeIn } from './scrollFade';
 
 window.addEventListener('DOMContentLoaded', () => {
   initScrollFadeIn();
+  highlightCurrentNavLink();
 
-});
-
-
-// Toggle function for opening and closing the mobile navigation menu
-window.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('menuToggle') as HTMLButtonElement;
   const nav = document.getElementById('mobileNav') as HTMLElement;
 
@@ -21,3 +17,23 @@ window.addEventListener('DOMContentLoaded', () => {
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
   });
 });
+
+function highlightCurrentNavLink(): void {
+  const path = window.location.pathname.split('/').pop() || '';
+
+  // Desktop sidebar
+  document.querySelectorAll('.nav-links a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href.includes(path)) {
+      link.classList.add('active');
+    }
+  });
+
+  // Mobile nav
+  document.querySelectorAll('.mobile-nav a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    if (href.includes(path)) {
+      link.classList.add('active');
+    }
+  });
+}
