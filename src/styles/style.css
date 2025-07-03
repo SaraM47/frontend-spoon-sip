@@ -116,6 +116,14 @@ body {
   transform: scaleX(1);
 }
 
+.nav-links a.active,
+.mobile-nav a.active {
+  background-color: var(--accent-brown);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.4rem 0.8rem;
+}
+
 .nav-separator {
   border: none;
   border-top: 1px solid var(--dark);
