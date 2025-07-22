@@ -122,6 +122,10 @@
   font-size: 1rem;
 }
 
+.section-reviews {
+  margin-top: 4rem;
+}
+
 .section-about {
   background-color: var(--peach);
   padding: 2rem;
@@ -182,7 +186,7 @@
 /* Decorative illustration styling */
 .floating-deco-wrapper {
   position: relative;
-  height: 200px; 
+  height: 12ch; 
   z-index: 5;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -215,7 +219,7 @@
 }
 
 .smoothie-2 {
-  top: 60vh;
+  top: 42vh;
   right: 6vw;
 }
 
